@@ -26,7 +26,7 @@ const NavLinks = () => {
   return (
     <>
       {links.map((link) => (
-        <div key={link.name}> 
+        <div key={link.toString()}> 
           <div className="px-3 text-left md:cursor-pointer group">
             <h1
               className="py-7 flex justify-between items-center md:pr-0 pr-5"
@@ -47,9 +47,9 @@ const NavLinks = () => {
                   </div>
                   <div className="bg-white p-3.5">
                     {link.sublinks.map((mysublinks) => (
-                      <div key={link.name}>
+                      <div key={mysublinks.toString()}>
                         {mysublinks.sublink.map((slink) => (
-                          <li key={link.name} className="text-sm text-gray-600 my-2.5">
+                          <li key={slink.toString()} className="text-sm text-gray-600 my-2.5">
                             <Link
                               href={slink.link}
                               className="hover:text-primary"
@@ -73,9 +73,9 @@ const NavLinks = () => {
           >
             {/* Sublinks */}
             {link.sublinks?.map((slinks) => (
-              <div key={link.name}>
+              <div key={slinks.toString()}>
                 {slinks.sublink.map((slink) => (
-                  <li className="py-3 pl-14">
+                  <li key={slink.toString()} className="py-3 pl-14">
                     <Link href={slink.link}>{slink.name}</Link>
                   </li>
                 ))}
