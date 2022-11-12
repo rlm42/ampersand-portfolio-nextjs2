@@ -21,7 +21,7 @@ const NavLinks = () => {
     // { name: "Contact" },
   ];
 
-  const [heading, setHeading] = useState();
+  const [heading, setHeading] = useState("");
 
   return (
     <>
