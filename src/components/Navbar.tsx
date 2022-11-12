@@ -122,9 +122,9 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <div className="md:block hidden">
+        {/* <div className="md:block hidden">
           <Button />
-        </div>
+        </div> */}
         {/* Mobile Nav*/}
         <ul
           className={`md:hidden bg-white absolute w-1/2 h-full bottom-0 py-12 pl-4 duration-500 z-50 ${
@@ -148,9 +148,9 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
-          <div className="py-5">
+          {/* <div className="py-5">
             <Button />
-          </div>
+          </div> */}
         </ul>
       </div>
     </nav>
