@@ -144,7 +144,8 @@ const Carousel = () => {
     // </section>
 
     // Set the z-index to negative (we want it to display behind the Nav menu)
-    <div className="relative -z-50">
+    <div className="relative z-49">
+    {/* <div className="relative -z-50"> */}
       {/* Use Zoom tag by 3rd party and map each image with layout */}
       <Zoom {...zoomInProperties}>
         {slideImages.map((each, index) => (

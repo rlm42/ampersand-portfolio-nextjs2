@@ -100,21 +100,24 @@ const Navbar = () => {
           </div>
         </div>
         {/* Flex on medium and bigger screens, hidden on smaller screens below md breakpoint */}
-        <ul className="md:flex hidden uppercase items-center gap-8 font-[Poppins]">
+        <ul className="md:flex hidden uppercase items-center gap-8 font-[Open_Sans]">
           <li>
-            <Link href="/" className="py-7 px-3 inline-block">
+            <Link href="/" className="py-7 px-3 inline-block hover:text-primary">
               Home
             </Link>
           </li>
           <li>
-            <Link href="/" className="py-7 px-3 inline-block">
+            <Link href="/" className="py-7 px-3 inline-block hover:text-primary">
               About Me
             </Link>
           </li>
+          {/* This causes a hydration failed error, if it happens remove the div */}
+          <div className="hover:text-primary z-50">
           {/* Portfolio Dropdown */}
           <NavLinks />
+          </div>
           <li>
-            <Link href="/" className="py-7 px-3 inline-block">
+            <Link href="/" className="py-7 px-3 inline-block hover:text-primary">
               Contact
             </Link>
           </li>
@@ -124,10 +127,11 @@ const Navbar = () => {
         </div>
         {/* Mobile Nav*/}
         <ul
-          className={`md:hidden bg-white absolute w-full h-full bottom-0 py-24 pl-4 duration-500 z-1 ${
+          className={`md:hidden bg-white absolute w-1/2 h-full bottom-0 py-12 pl-4 duration-500 z-50 ${
             open ? "left-0" : "left-[-100%]"
           }`}
         >
+          
           <li>
             <Link href="/" className="py-7 px-3 inline-block">
               Home
