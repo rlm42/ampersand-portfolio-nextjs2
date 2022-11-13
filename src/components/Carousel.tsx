@@ -154,7 +154,7 @@ const Carousel = () => {
               src={each.url}
               className="w-3/4 object-cover rounded-lg shadow-xl"
             />
-            <h1 className="absolute bottom-12 text-white text-3xl mb-2">
+            <h1 className="absolute top-12 text-white md:text-3xl mb-2 underline decoration-dotted">
               <span>{each.caption}</span>
             </h1>
           </div>

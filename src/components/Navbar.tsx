@@ -96,28 +96,57 @@ const Navbar = () => {
             className="md:cursor-pointer h-9"
           />
           <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
-            <ion-icon name={`${open ? "close" : "menu"}`}></ion-icon>
+            {/* <ion-icon name={`${open ? "close" : "menu"}`}></ion-icon> */}
+
+            {/* Tabler Icons SVG */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="icon icon-tabler icon-tabler-menu-2"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <line x1="4" y1="6" x2="20" y2="6"></line>
+              <line x1="4" y1="12" x2="20" y2="12"></line>
+              <line x1="4" y1="18" x2="20" y2="18"></line>
+            </svg>
+
           </div>
         </div>
         {/* Flex on medium and bigger screens, hidden on smaller screens below md breakpoint */}
         <ul className="md:flex hidden uppercase items-center gap-8 font-[Open_Sans]">
           <li>
-            <Link href="/" className="py-7 px-3 inline-block hover:text-primary">
+            <Link
+              href="/"
+              className="py-7 px-3 inline-block hover:text-primary"
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link href="/" className="py-7 px-3 inline-block hover:text-primary">
+            <Link
+              href="/"
+              className="py-7 px-3 inline-block hover:text-primary"
+            >
               About Me
             </Link>
           </li>
           {/* This causes a hydration failed error, if it happens remove the div */}
           <div className="hover:text-primary z-50">
-          {/* Portfolio Dropdown */}
-          <NavLinks />
+            {/* Portfolio Dropdown */}
+            <NavLinks />
           </div>
           <li>
-            <Link href="/" className="py-7 px-3 inline-block hover:text-primary">
+            <Link
+              href="/"
+              className="py-7 px-3 inline-block hover:text-primary"
+            >
               Contact
             </Link>
           </li>
@@ -131,7 +160,6 @@ const Navbar = () => {
             open ? "left-0" : "left-[-100%]"
           }`}
         >
-          
           <li>
             <Link href="/" className="py-7 px-3 inline-block">
               Home

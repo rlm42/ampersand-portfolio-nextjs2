@@ -36,16 +36,16 @@ const NavLinks = () => {
             >
               {link.name}
               <span className="text-xl md:mt-1 md:ml-2 inline">
-                <ion-icon name={`${heading === link.name ? "chevron-up" : "chevron-down"}`}></ion-icon>
-              </span>
+                {/* <ion-icon name={`${heading === link.name ? "chevron-up" : "chevron-down"}`}></ion-icon> */}
+                <i className="fa-solid fa-chevron-up"></i>              </span>
             </h1>
             {link.submenu && (
               <div>
                 <div className="absolute top-20 hidden group-hover:md:block hover:md:block">
                   <div className="py-3">
-                    <div className="w-4 h-4 left-3 absolute mt-1 bg-white rotate-45"></div>
+                    <div className="w-4 h-4 left-3 absolute mt-1 bg-white rotate-45 border-2"></div>
                   </div>
-                  <div className="bg-white p-3.5">
+                  <div className="bg-white p-3.5 border-2">
                     {link.sublinks.map((mysublinks) => (
                       <div key={mysublinks.toString()}>
                         {mysublinks.sublink.map((slink) => (
